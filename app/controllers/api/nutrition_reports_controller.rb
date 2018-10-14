@@ -1,5 +1,14 @@
 class Api::NutritionReportsController < ApplicationController
 
+  def index
+    if current_user
+      @nutrition_reports = current_user.nutrition_reports
+      render 'index.json.jbuilder'
+    else
+      render json: []
+    end
+  end
+
   def create
     @nutrition_report = NutritionReport.new(
                                             count: params[:count],

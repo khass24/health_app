@@ -1,0 +1,1 @@
+json.array! @nutrition_reports, partial: 'nutrition_report', as: :nutrition_report

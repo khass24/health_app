@@ -1,0 +1,1 @@
+json.array! @movement_reports, partial: 'movement_report', as: :movement_report

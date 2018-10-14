@@ -1,0 +1,1 @@
+json.array! @stress_reports, partial: 'stress_report', as: :stress_report

@@ -1,0 +1,2 @@
+json.relaxation_hours json.count
+json.relaxation_quality json.quality
