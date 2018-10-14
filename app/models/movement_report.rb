@@ -1,0 +1,2 @@
+class MovementReport < DailyReport
+end

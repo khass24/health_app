@@ -1,0 +1,2 @@
+class SleepReport < DailyReport
+end

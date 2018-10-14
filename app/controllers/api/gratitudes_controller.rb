@@ -1,11 +1,5 @@
 class Api::GratitudesController < ApplicationController
 
-  def index
-    @gratitudes = Gratitude.all
-
-    render index.json.jbuilder
-  end
-
   def create
     @gratitude = Gratitude.new(
                           user_id: current_user.id,
