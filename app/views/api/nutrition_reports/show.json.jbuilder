@@ -1,2 +1,1 @@
-json.calories @nutrition_report.count
-json.quality @nutrition_report.quality
+json.partial! @nutrition_report, partial: 'nutrition_report', as: :nutrition_report

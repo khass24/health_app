@@ -1,2 +1,1 @@
-json.hours_of_relaxation @stress_report.count
-json.quality @stress_report.quality
+json.partial! @stress_report, partial: 'stress_report', as: :stress_report

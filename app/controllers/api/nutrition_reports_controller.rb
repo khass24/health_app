@@ -11,6 +11,7 @@ class Api::NutritionReportsController < ApplicationController
 
   def create
     @nutrition_report = NutritionReport.new(
+                                            user_id: current_user.id,
                                             count: params[:count],
                                             quality: params[:quality]
                                             )
@@ -19,6 +20,11 @@ class Api::NutritionReportsController < ApplicationController
     else
       render json: {errors: @nutrition_report.errors.full_messages}, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @nutrition_report = NutritionReport.find(params[:id])
+    render 'show.json.jbuilder'
   end
 
 end

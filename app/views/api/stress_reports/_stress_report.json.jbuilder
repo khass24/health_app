@@ -1,2 +1,2 @@
-json.relaxation_hours json.count
-json.relaxation_quality json.quality
+json.relaxation_hours stress_report.count
+json.relaxation_quality stress_report.quality

@@ -1,2 +1,2 @@
-json.calorie_count json.count
-json.food_quality json.quality
+json.calorie_count nutrition_report.count
+json.food_quality nutrition_report.quality

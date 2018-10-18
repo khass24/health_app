@@ -1,2 +1,1 @@
-json.steps @movement_report.count
-json.quality @movement_report.quality
+json.partial! @movement_report, partial: 'movement_report', as: :movement_report

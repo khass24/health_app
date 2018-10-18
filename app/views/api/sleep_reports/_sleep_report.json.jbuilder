@@ -1,2 +1,2 @@
-json.sleep_hours json.count
-json.sleep_quality json.quality
+json.sleep_hours sleep_report.count
+json.sleep_quality sleep_report.quality

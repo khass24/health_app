@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_13_200525) do
+ActiveRecord::Schema.define(version: 2018_10_18_010555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2018_10_13_200525) do
   create_table "daily_reports", force: :cascade do |t|
     t.integer "user_id"
     t.integer "count"
-    t.date "date"
     t.integer "quality"
     t.string "type"
     t.datetime "created_at", null: false

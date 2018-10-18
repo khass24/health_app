@@ -11,6 +11,7 @@ class Api::SleepReportsController < ApplicationController
 
   def create
     @sleep_report = SleepReport.new(
+                                    user_id: current_user.id,
                                     count: params[:count],
                                     quality: params[:quality]
                                     )
@@ -19,6 +20,11 @@ class Api::SleepReportsController < ApplicationController
     else
       render json: {errors: @sleep_report.errors.full_messages}, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @sleep_report = SleepReport.find(params[:id])
+    render 'show.json.jbuilder'
   end
 
 end

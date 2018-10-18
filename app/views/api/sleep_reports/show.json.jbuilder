@@ -1,2 +1,1 @@
-json.hours_of_sleep @sleep_report.count
-json.quality @sleep_report.quality
+json.partial! @sleep_report, partial: 'sleep_report', as: :sleep_report

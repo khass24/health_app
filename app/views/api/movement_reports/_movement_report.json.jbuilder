@@ -1,2 +1,2 @@
-json.step_count json.count
-json.movement_quality json.quality
+json.step_count movement_report.count
+json.movement_quality movement_report.quality

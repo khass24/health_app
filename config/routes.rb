@@ -10,14 +10,19 @@ Rails.application.routes.draw do
 
     get "movement_reports" => "movement_reports#index"
     post "/movement_reports" => "movement_reports#create"
+    get "/movement_reports/:id" => "movement_reports#show"
 
     get "nutrition_reports" => "nutrition_reports#index"
     post "/nutrition_reports" => "nutrition_reports#create"
-    
+    get "/nutrition_reports/:id" => "nutrition_reports#show"
+
     get "sleep_reports" => "sleep_reports#index"
     post "/sleep_reports" => "sleep_reports#create"
-    
+    get "/sleep_reports/:id" => "sleep_reports#show"
+
     get "stress_reports" => "stress_reports#index"
-    post "/stress_reports" => "movement_reports#create"
+    post "/stress_reports" => "stress_reports#create"
+    get "/stress_reports/:id" => "stress_reports#show"
+
   end
 end

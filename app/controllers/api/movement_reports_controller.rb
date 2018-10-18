@@ -22,4 +22,9 @@ class Api::MovementReportsController < ApplicationController
     end
   end
 
+  def show
+    @movement_report = MovementReport.find(params[:id])
+    render 'show.json.jbuilder'
+  end
+
 end

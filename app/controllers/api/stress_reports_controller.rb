@@ -11,14 +11,20 @@ class Api::StressReportsController < ApplicationController
 
   def create
     @stress_report = StressReport.new(
+                                      user_id: current_user.id,
                                       count: params[:count],
                                       quality: params[:quality]
-                                      )
+                                     ) 
     if @stress_report.save
       render 'show.json.jbuilder'
     else
       render json: {errors: @stress_report.errors.full_messages}, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @stress_report = StressReport.find(params[:id])
+    render 'show.json.jbuilder'
   end
 
 end
