@@ -1,2 +1,4 @@
+json.user_id nutrition_report.user_id
 json.calorie_count nutrition_report.count
-json.food_quality nutrition_report.quality
+json.nutrition_score nutrition_report.nutrition_score
+json.report_date nutrition_report.formatted_date

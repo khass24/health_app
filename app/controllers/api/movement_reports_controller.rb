@@ -12,8 +12,7 @@ class Api::MovementReportsController < ApplicationController
   def create
     @movement_report = MovementReport.new(
                                           user_id: current_user.id,
-                                          count: params[:count],
-                                          quality: params[:quality]
+                                          count: params[:count]
                                           )
     if @movement_report.save
       render 'show.json.jbuilder'

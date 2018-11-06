@@ -1,2 +1,4 @@
+json.user_id stress_report.user_id
 json.relaxation_hours stress_report.count
-json.relaxation_quality stress_report.quality
+json.relaxation_score stress_report.relax_score
+json.report_date stress_report.formatted_date

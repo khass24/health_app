@@ -12,8 +12,7 @@ class Api::SleepReportsController < ApplicationController
   def create
     @sleep_report = SleepReport.new(
                                     user_id: current_user.id,
-                                    count: params[:count],
-                                    quality: params[:quality]
+                                    count: params[:count]
                                     )
     if @sleep_report.save
       render 'show.json.jbuilder'

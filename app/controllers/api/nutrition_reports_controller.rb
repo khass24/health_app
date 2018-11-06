@@ -12,8 +12,7 @@ class Api::NutritionReportsController < ApplicationController
   def create
     @nutrition_report = NutritionReport.new(
                                             user_id: current_user.id,
-                                            count: params[:count],
-                                            quality: params[:quality]
+                                            count: params[:count]
                                             )
     if @nutrition_report.save
       render 'show.json.jbuilder'

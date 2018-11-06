@@ -12,8 +12,7 @@ class Api::StressReportsController < ApplicationController
   def create
     @stress_report = StressReport.new(
                                       user_id: current_user.id,
-                                      count: params[:count],
-                                      quality: params[:quality]
+                                      count: params[:count]
                                      ) 
     if @stress_report.save
       render 'show.json.jbuilder'
