@@ -26,4 +26,21 @@ class Api::StressReportsController < ApplicationController
     render 'show.json.jbuilder'
   end
 
+  def update
+    @stress_report = StressReport.find(params[:id])
+
+    @stress_report.count = params[:count] || @stress_report.count
+
+    if @stress_report.save
+      render "show.json.jbuilder"
+    else
+      render json: {errors: @stress_report.errors.full_messages}, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @stress_report = StressReport.find(params[:id])
+    @stress_report.destroy
+    render json: {message: "Stress Report successfully deleted"}
+  end
 end

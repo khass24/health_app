@@ -26,4 +26,21 @@ class Api::NutritionReportsController < ApplicationController
     render 'show.json.jbuilder'
   end
 
+  def update
+    @nutrition_report = NutritionReport.find(params[:id])
+
+    @nutrition_report.count = params[:count] || @nutrition_report.count
+
+    if @nutrition_report.save
+      render "show.json.jbuilder"
+    else
+      render json: {errors: @nutrition_report.errors.full_messages}, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @nutrition_report = NutritionReport.find(params[:id])
+    @nutrition_report.destroy
+    render json: {message: "Nutrition Report successfully deleted"}
+  end
 end

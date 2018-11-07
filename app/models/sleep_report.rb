@@ -13,5 +13,4 @@ class SleepReport < DailyReport
       score = 2.5
     end
   end
-
 end

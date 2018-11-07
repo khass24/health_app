@@ -26,4 +26,21 @@ class Api::MovementReportsController < ApplicationController
     render 'show.json.jbuilder'
   end
 
+  def update
+    @movement_report = MovementReport.find(params[:id])
+
+    @movement_report.count = params[:count] || @movement_report.count
+
+    if @movement_report.save
+      render "show.json.jbuilder"
+    else
+      render json: {errors: @movement_report.errors.full_messages}, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @movement_report = MovementReport.find(params[:id])
+    @movement_report.destroy
+    render json: {message: "Movement Report successfully deleted"}
+  end
 end

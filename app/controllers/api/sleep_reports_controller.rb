@@ -26,4 +26,21 @@ class Api::SleepReportsController < ApplicationController
     render 'show.json.jbuilder'
   end
 
+  def update
+    @sleep_report = SleepReport.find(params[:id])
+
+    @sleep_report.count = params[:count] || @sleep_report.count
+
+    if @sleep_report.save
+      render "show.json.jbuilder"
+    else
+      render json: {errors: @sleep_report.errors.full_messages}, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @sleep_report = SleepReport.find(params[:id])
+    @sleep_report.destroy
+    render json: {message: "Sleep Report successfully deleted"}
+  end
 end
