@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :sleep_reports
   has_many :stress_reports
   has_many :nutrition_reports
+
 end

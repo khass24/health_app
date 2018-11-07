@@ -1,6 +1,10 @@
 class SleepReport < DailyReport
   belongs_to :user
 
+  # validate :one_a_day
+   
+
+
   def sleep_score
     score = 0
     if count >= 7 && count <= 9
