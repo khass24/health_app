@@ -3,6 +3,9 @@ class Api::StressReportsController < ApplicationController
   def index
     if current_user
       @stress_reports = current_user.stress_reports
+
+      @stress_array = @stress_reports.map { |s| s.count }
+
       render 'index.json.jbuilder'
     else
       render json: []

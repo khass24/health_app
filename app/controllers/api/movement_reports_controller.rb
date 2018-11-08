@@ -3,6 +3,9 @@ class Api::MovementReportsController < ApplicationController
   def index
     if current_user
       @movement_reports = current_user.movement_reports
+
+      @movement_array = @movement_reports.map { |s| s.count }
+
       render 'index.json.jbuilder'
     else
       render json: []

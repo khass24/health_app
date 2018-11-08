@@ -3,6 +3,9 @@ class Api::NutritionReportsController < ApplicationController
   def index
     if current_user
       @nutrition_reports = current_user.nutrition_reports
+
+      @nutrition_array = @nutrition_reports.map { |s| s.count }
+
       render 'index.json.jbuilder'
     else
       render json: []
