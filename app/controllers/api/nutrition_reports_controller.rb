@@ -4,7 +4,7 @@ class Api::NutritionReportsController < ApplicationController
     if current_user
       @nutrition_reports = current_user.nutrition_reports
 
-      @nutrition_array = @nutrition_reports.map { |s| s.count }
+      @nutrition_array = @nutrition_reports.map { |s| s.count }.reverse
 
       render 'index.json.jbuilder'
     else

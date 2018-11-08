@@ -4,7 +4,7 @@ class Api::StressReportsController < ApplicationController
     if current_user
       @stress_reports = current_user.stress_reports
 
-      @stress_array = @stress_reports.map { |s| s.count }
+      @stress_array = @stress_reports.map { |s| s.count }.reverse
 
       render 'index.json.jbuilder'
     else

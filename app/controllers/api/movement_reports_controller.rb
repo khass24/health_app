@@ -4,7 +4,7 @@ class Api::MovementReportsController < ApplicationController
     if current_user
       @movement_reports = current_user.movement_reports
 
-      @movement_array = @movement_reports.map { |s| s.count }
+      @movement_array = @movement_reports.map { |s| s.count }.reverse
 
       render 'index.json.jbuilder'
     else
