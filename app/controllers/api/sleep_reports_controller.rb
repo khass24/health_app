@@ -3,6 +3,9 @@ class Api::SleepReportsController < ApplicationController
   def index
     if current_user
       @sleep_reports = current_user.sleep_reports
+
+      @sleep_array = @sleep_reports.map { |s| s.count }
+
       render 'index.json.jbuilder'
     else
       render json: []

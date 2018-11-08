@@ -31,6 +31,5 @@ Rails.application.routes.draw do
     get "/stress_reports/:id" => "stress_reports#show"
     patch "/stress_reports/:id" => "stress_reports#update"
     delete "/stress_reports/:id" => "stress_reports#destroy"
-
   end
 end
