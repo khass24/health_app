@@ -1,4 +1,16 @@
 class Api::UsersController < ApplicationController
+
+  before_action :authenticate_user, only: [:show, :daily_score]
+
+  def show
+    @user = current_user
+    render 'show.json.jbuilder'
+  end
+
+  def daily_score
+    render json: {daily_score: current_user.daily_score}
+  end
+
   def create
     user = User.new(
       name: params[:name],

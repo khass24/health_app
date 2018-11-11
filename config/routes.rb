@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   namespace :api do
     post "/users" => "users#create"
+    get "/users/:id" => "users#show"
+    get '/daily_score' => 'users#daily_score'
 
     post "/sessions" => "sessions#create"
 

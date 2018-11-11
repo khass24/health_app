@@ -2,7 +2,7 @@ class MovementReport < DailyReport
   belongs_to :user
   # validate :one_a_day
   
-  def move_score
+  def score
     score = 0
     if count >= 12500
       score = 10
@@ -16,5 +16,4 @@ class MovementReport < DailyReport
       score = 2
     end
   end
-
 end

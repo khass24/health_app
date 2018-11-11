@@ -5,7 +5,7 @@ class SleepReport < DailyReport
    
 
 
-  def sleep_score
+  def score
     score = 0
     if count >= 7 && count <= 9
       score = 10
