@@ -1,6 +1,6 @@
 class NutritionReport < DailyReport
   belongs_to :user
-  # validate :one_a_day
+
   def score
     score = 0
     if count >= 2600 && count <= 2800

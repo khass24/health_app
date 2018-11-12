@@ -12,11 +12,11 @@ class User < ApplicationRecord
 
   def daily_score
     scores = []
-    scores << current_user.movement_reports.last.score if movement_reports.any?
-    scores << current_user.sleep_reports.last.score if sleep_reports.any?
-    scores << current_user.stress_reports.last.score if stress_reports.any?
-    scores << current_user.nutrition_reports.last.score if nutrition_reports.any?
-    score.sum / score.length
+    scores << User.first.movement_reports.last.score if movement_reports.any?
+    scores << User.first.sleep_reports.last.score if sleep_reports.any?
+    scores << User.first.stress_reports.last.score if stress_reports.any?
+    scores << User.first.nutrition_reports.last.score if nutrition_reports.any?
+    (scores.sum / scores.length).round(1)
   end
 
 end

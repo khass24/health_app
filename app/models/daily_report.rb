@@ -6,9 +6,4 @@ class DailyReport < ApplicationRecord
   def formatted_date
     created_at.strftime("%b %d, %Y")
   end 
-    
-  def daily_score
-    (@movement_score + @sleeps_score + @stress_score + @calorie_score) / 4
-  end
-
 end
