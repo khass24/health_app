@@ -7,7 +7,7 @@ class SleepReport < DailyReport
       score = 10
     elsif count >= 6 && count <= 10
       score = 7.5
-    elsif count >= 5 && count <= 11
+    elsif count >= 5
       score = 5
     else
       score = 2.5

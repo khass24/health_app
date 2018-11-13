@@ -8,7 +8,7 @@ class Api::UsersController < ApplicationController
   end
 
   def daily_score
-    render json: {daily_score: current_user.daily_score}
+    render json: {daily_score: current_user.daily_score, move_score: current_user.move_score, nutrition_score: current_user.nutrition_score, stress_score: current_user.stress_score, sleep_score: current_user.sleep_score}
   end
 
   def create

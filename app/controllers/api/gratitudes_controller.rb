@@ -2,7 +2,7 @@ class Api::GratitudesController < ApplicationController
 
   def index
     if current_user
-      @gratitudes = current_user.gratitudes
+      @gratitudes = current_user.gratitudes.reverse
       render 'index.json.jbuilder'
     else
       render json: []

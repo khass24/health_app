@@ -19,4 +19,20 @@ class User < ApplicationRecord
     (scores.sum / scores.length).round(1)
   end
 
+  def move_score
+    User.first.movement_reports.last.score
+  end
+
+  def nutrition_score
+    User.first.nutrition_reports.last.score
+  end
+
+  def stress_score
+    User.first.stress_reports.last.score
+  end
+
+  def sleep_score
+    User.first.sleep_reports.last.score
+  end
+
 end
