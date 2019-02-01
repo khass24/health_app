@@ -50,3 +50,4 @@
 # end
 
 # puts daily_report
+# puts gratitude.all
