@@ -1,4 +1,4 @@
-For the majority of my life, I was in bad shape. I ate whatever I wanted, went to the gym a few times a month (if that) and that was my existence.
+For most of my life, I was in bad shape. I ate whatever I wanted, went to the gym a few times a month (if that) and that was my existence.
 
 But back in 2017, enough was enough. I got my act together and ended up losing over 70 pounds. Since then, I've become more and more interested in what it means to be healthy. Most people picture a salad and some dumbbells when they think of health. But through my research, I've realized that there's more to it than that. So I built an app that will help a user enter and track what I've defined as the four main areas of good health: Sleep, Movement, Nutrition, and Stress Management.
 
