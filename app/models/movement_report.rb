@@ -3,13 +3,13 @@ class MovementReport < DailyReport
   
   def score
     score = 0
-    if count >= 12500
+    if count >= 10000
       score = 10
-    elsif count >= 10000
+    elsif count >= 8000
       score = 8
-    elsif count >= 7500
-      score = 6
     elsif count >= 5000
+      score = 6
+    elsif count >= 4000
       score = 4
     else
       score = 2
